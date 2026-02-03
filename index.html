@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎵 Music Playlist Organizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🎵 Music Playlist Organizer</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="nav-link active" data-page="home">Home</a></li>
+                    <li><a href="#" class="nav-link" data-page="help">Help</a></li>
+                    <li><a href="#" class="nav-link" data-page="about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Home Page -->
+        <section id="home-page" class="page active">
+            <div class="search-section">
+                <h2>Search for Songs</h2>
+                <form id="search-form">
+                    <input type="text" id="search-query" placeholder="Search for songs, artists, or albums..." required>
+                    <button type="submit">Search Music</button>
+                </form>
+                <div id="search-results" class="results-container"></div>
+            </div>
+
+            <div class="playlist-section">
+                <div class="section-header">
+                    <h2>My Playlist <span id="playlist-count">(0)</span></h2>
+                    <button id="share-playlist-btn" class="share-btn">📤 Share Playlist</button>
+                </div>
+                <div id="playlist-container" class="playlist-container">
+                    <div class="empty-playlist">
+                        <p>Your playlist is empty. Search for songs above to add them!</p>
+                        <div class="empty-icon">♫</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="music-player">
+                <div class="player-header">
+                    <h3>Now Playing</h3>
+                    <div id="current-song-info">No song selected</div>
+                </div>
+                <div class="player-controls">
+                    <button id="prev-btn" class="control-btn">⏮</button>
+                    <button id="play-pause-btn" class="control-btn play-btn">▶</button>
+                    <button id="next-btn" class="control-btn">⏭</button>
+                </div>
+                <div class="player-progress">
+                    <div id="progress-bar">
+                        <div id="progress"></div>
+                    </div>
+                    <div class="time-info">
+                        <span id="current-time">0:00</span>
+                        <span id="duration">0:00</span>
+                    </div>
+                </div>
+                <audio id="audio-element"></audio>
+            </div>
+        </section>
+
+       
